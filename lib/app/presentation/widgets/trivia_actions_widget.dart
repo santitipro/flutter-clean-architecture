@@ -70,6 +70,7 @@ class _TriviaActionsState extends State<TriviaActions> {
 
   void handleRandomTrivia() {
     _controller.clear();
+    setState(() => searchStr = null);
     _bloc.add(GetTriviaForRandomNumber());
   }
 }
